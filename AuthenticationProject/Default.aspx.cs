@@ -15,13 +15,15 @@ namespace AuthenticationProject
 
             {
 
-                MessageRole.InnerText = "Welcome HR ";
+                //MessageRole.InnerText = "Welcome HR ";
+                Response.Redirect("Hr/HrUser.aspx");
 
             }
 
             if (HttpContext.Current.User.IsInRole("Admin"))
             {
-                MessageRole.InnerText = "Welcome Admin";
+               // MessageRole.InnerText = "Welcome Admin";
+                Response.Redirect("Admin/Admin.aspx");
             }
         }
     }
